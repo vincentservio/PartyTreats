@@ -1,7 +1,20 @@
-document.addEventListener("DOMContentLoaded", loadindex);
+const loadHome = () => {
+  loadNav();
+};
+document.addEventListener("DOMContentLoaded", loadHome);
 
-function loadindex() {
-  const index = document.getElementById("index");
+const loadNav = () => {
+  // debugger;
+  document.getElementById("nav").innerText += "Form";
+  document.getElementById("Home").innerText += "Home";
+  document.getElementById("About").innerText += "About";
+  document.getElementById("Contact").innerText += "Contact";
+  document.getElementById("nav").addEventListener("click", loadform);
+};
+
+function loadform() {
+  clearPage();
+  const index = document.getElementById("Form");
 
   // let id = event.target.dataset.id;
   //  let cardFormDiv = document.getElementById("name-form");
@@ -29,9 +42,9 @@ function loadindex() {
   //    createChore(event, id);
   //  }
   //  );
-  fetch("http://localhost:3000/pastries")
-    .then((response) => response.json())
-    .then((data) => {
-      data.map((pastry) => (index.innerHTML += `<div>${pastry.type_of}</div>`));
-    });
+  // fetch("http://localhost:3000/pastries")
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     data.map((pastry) => (index.innerHTML += `<div>${pastry.type_of}</div>`));
+  //   });
 }
