@@ -1,0 +1,4 @@
+const loadContact = () => {
+  clearPage();
+  loadNav();
+};

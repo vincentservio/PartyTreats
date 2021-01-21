@@ -1,50 +1,26 @@
-const loadHome = () => {
+const loadIndex = () => {
   loadNav();
+  loadHome();
 };
-document.addEventListener("DOMContentLoaded", loadHome);
+document.addEventListener("DOMContentLoaded", loadIndex);
 
 const loadNav = () => {
   // debugger;
-  document.getElementById("nav").innerText += "Form";
+  clearPage();
+  document.getElementById("Order").innerText += "Order";
   document.getElementById("Home").innerText += "Home";
   document.getElementById("About").innerText += "About";
   document.getElementById("Contact").innerText += "Contact";
-  document.getElementById("nav").addEventListener("click", loadform);
+  document.getElementById("Order").addEventListener("click", loadform);
+  document.getElementById("Home").addEventListener("click", loadHome);
+  document.getElementById("Contact").addEventListener("click", loadContact);
+  document.getElementById("About").addEventListener("click", loadAbout);
 };
 
-function loadform() {
+const loadHome = () => {
   clearPage();
-  const index = document.getElementById("Form");
-
-  // let id = event.target.dataset.id;
-  //  let cardFormDiv = document.getElementById("name-form");
-  let html = `
-        <form>
-            Theme: <input type="text" id="theme" placeholder="Finding Nemo">
-            <br/>
-           Color: <input type="text" id="color" placeholder="Blue">
-             <br> 
-            Size:<input type="text" id="size" placeholder="Small">
-
-            <br> 
-            <select id="days">
-                <option>CupCakes</option>
-                <option>Cake</option>
-                <option>Cookies</option>
-            
-            <select>
-              <br> 
-            <input type="submit"> 
-        </form>
-        `;
-  index.innerHTML += html;
-  //  document.querySelector("form").addEventListener("submit", () => {
-  //    createChore(event, id);
-  //  }
-  //  );
-  // fetch("http://localhost:3000/pastries")
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     data.map((pastry) => (index.innerHTML += `<div>${pastry.type_of}</div>`));
-  //   });
-}
+  loadNav();
+  const home = document.getElementById("bg-te");
+  home.innerHTML += ` <div id="bg-text" class="bg-text"> <h1>I am John Doe</h1>
+      <p>And I'm a Photographer</p> </div>`;
+};

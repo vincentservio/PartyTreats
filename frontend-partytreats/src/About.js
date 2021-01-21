@@ -1,0 +1,4 @@
+const loadAbout = () => {
+  clearPage();
+  loadNav();
+};

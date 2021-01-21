@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap");
+
 body {
-  background-color: lightblue;
   background-image: url("https://www.contemporist.com/wp-content/uploads/2020/04/monochrome-pink-retail-interior-bakery-cafe-restaurant-170420-1106-01.jpg");
+
+  /* background-color: lightblue;
   /* filter: blur(8px); */
   /* -webkit-filter: blur(6px); */
 
@@ -8,15 +11,34 @@ body {
   height: 60vw;
 
   /* Center and scale the image nicely */
-  background-position: center;
+  /* background-position: center;*/
   background-repeat: no-repeat;
   background-size: cover;
 }
-.nav {
+
+.Nav {
+  text-align: center;
+  text-decoration: none;
+  font-family: "Lily Script One", cursive;
+  color: aliceblue;
+  font-size: 4vw;
+  padding: 10px;
+}
+.Nav:hover {
+  text-align: center;
+  text-decoration: none;
+  font-family: "Lily Script One", cursive;
+  color: rgb(0, 228, 68);
+  font-size: 4vw;
+  padding: 10px;
+}
+input {
   text-align: center;
 }
 input[type="text"],
 select {
+  text-align: center;
+  align-items: center;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -28,7 +50,7 @@ select {
 
 input[type="submit"] {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #b1b1b1;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -39,5 +61,43 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  /* background-image: url("https://www.contemporist.com/wp-content/uploads/2020/04/monochrome-pink-retail-interior-bakery-cafe-restaurant-170420-1106-01.jpg"); */
+
+  /* Add the blur effect */
+  /* filter: blur(8px); */
+  /* -webkit-filter: blur(8px); */
+
+  /* Full height */
+  /* height: 100%; */
+
+  /* Center and scale the image nicely */
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 90px;
+  text-align: center;
 }
