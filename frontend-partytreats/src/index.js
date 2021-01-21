@@ -21,6 +21,8 @@ const loadHome = () => {
   clearPage();
   loadNav();
   const home = document.getElementById("bg-te");
-  home.innerHTML += ` <div id="bg-text" class="bg-text"> <h1>I am John Doe</h1>
+  home.innerHTML += ` <div id="bg-text" class="bg-text">
+
+  <h1>I am John Doe</h1>
       <p>And I'm a Photographer</p> </div>`;
 };

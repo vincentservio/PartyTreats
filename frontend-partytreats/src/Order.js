@@ -29,9 +29,4 @@ function loadform() {
   //    createChore(event, id);
   //  }
   //  );
-  // fetch("http://localhost:3000/pastries")
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     data.map((pastry) => (index.innerHTML += `<div>${pastry.type_of}</div>`));
-  //   });
 }
