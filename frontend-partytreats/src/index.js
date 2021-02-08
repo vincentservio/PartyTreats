@@ -47,16 +47,16 @@ const loadHome = () => {
                 <div class="text">Caption Three</div>
               </div>
 
-              <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>
+              <a class="prev" onclick=${plusSlides(-1)}>&#10094;</a>
+              <a class="next" onclick=${plusSlides(1)}>&#10095;</a>
 
               </div>
               <br>
 
               <div style="text-align:center">
-                <span class="dot" id="current" ></span> 
-                <span class="dot" id="current"></span> 
-                <span class="dot" id="current" ></span> 
+                <span class="dot" onclick=${currentSlide(1)}></span> 
+                <span class="dot" onclick=${currentSlide(2)}></span> 
+                <span class="dot" onclick=${currentSlide(3)}></span> 
               </div>
 
 
@@ -70,15 +70,6 @@ const loadHome = () => {
  
   
   </div>`;
-
-  const prev = document.getElementById("prev");
-  prev.addEventListener("click", plusSlides(-1));
-
-  const next = document.getElementById("next");
-  next.addEventListener("click", plusSlides(1));
-
-  const current = document.getElementById("current");
-  current.addEventListener("click", currentSlide(1));
 
   var slideIndex = 1;
   showSlides(slideIndex);
@@ -109,8 +100,9 @@ const loadHome = () => {
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    debugger;
+    // slides[slideIndex - 1].style.display = "block";
+    // dots[slideIndex - 1].className += " active";
   }
 };
 //  <div id="bg-text" class="bg-text">
