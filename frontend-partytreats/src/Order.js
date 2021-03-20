@@ -11,14 +11,13 @@ function loadform() {
             <br/>
            Color: <input type="text" id="color" placeholder="Blue">
              <br> 
-            Size:<input type="text" id="size" placeholder="Small">
+            Size: <input type="text" id="size" placeholder="Small">
 
             <br> 
             <select id="days">
                 <option>CupCakes</option>
                 <option>Cake</option>
                 <option>Cookies</option>
-            
             <select>
               <br> 
             <input type="submit"> 

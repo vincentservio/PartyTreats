@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap");
 
 body {
-  background-image: url("https://cdn.hipwallpaper.com/i/64/35/wj908y.jpg");
+  /* background-image: url("https://i.pinimg.com/originals/92/17/4a/92174ad3758fdb8f9c2e4579ad5430a0.jpg"); */
 
-  /* background-color: lightblue;
+  background-color: lightblue;
   /* filter: blur(8px); */
   /* -webkit-filter: blur(6px); */
 
@@ -15,22 +15,30 @@ body {
   background-repeat: initial;
   background-size: cover;
 }
-
+form {
+  width: 50px;
+  /* height: 50px; */
+  /* background-color: red; */
+  /* Center vertically */
+  position: absolute;
+  /* top: 50%; */
+}
 .Nav {
   text-align: center;
   text-decoration: none;
   font-family: "Lily Script One", cursive;
   color: rgb(0, 0, 0);
-  font-size: 4vw;
-  padding: 10px;
+  font-size: 20px;
+  padding: 50px;
 }
+
 .Nav:hover {
   text-align: center;
   text-decoration: none;
   font-family: "Lily Script One", cursive;
-  color: rgb(0, 228, 68);
-  font-size: 4vw;
-  padding: 10px;
+  color: rgb(107, 0, 0);
+  font-size: 20px;
+  padding: 50px;
 }
 input {
   text-align: center;
@@ -39,7 +47,7 @@ input[type="text"],
 select {
   text-align: center;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -134,100 +142,95 @@ ul.products li {
 
 /* <++============>>>>>>>>>>>>>>>+++++>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>< */
 /* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
+.slide-container .prev,
+.slide-container .next {
+  /* top: 100px; */
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
   margin-top: -22px;
+  padding: 16px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
+  font-size: 20px;
+  transition: all 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+.slide-container .prev:hover,
+.slide-container .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  color: white;
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
+.slide-container .prev {
+  left: 2px;
+}
+
+.slide-container .next {
+  right: 2px;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 90px;
+
+  top: 20px;
+}
+
+.dots-container .dot {
+  cursor: pointer;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  color: #333;
+  border-radius: 50%;
+  background-color: #dfd6ce;
+}
+
+.dots-container .dot.active {
+  border: 2px solid green;
+}
+
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  /*   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+}
+
+body h1 {
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+.slide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  height: 100px;
+  width: 100px;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.slide-container .slide {
+  display: none;
+  width: 100%;
 }
 
-.active,
-.dot:hover {
-  background-color: #717171;
+.slide-container .slide.fade {
+  animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
+.slide-container .slide img {
+  width: 100%;
 }
