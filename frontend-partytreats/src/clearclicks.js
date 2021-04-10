@@ -7,5 +7,5 @@ const clearPage = () => {
   };
   clearnav();
   document.getElementById("Form").innerHTML = "";
-  document.getElementById("bg-te").innerHTML = "";
+  // document.getElementById("bg-te").innerHTML = "";
 };
